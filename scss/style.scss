@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+// 全体
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Yu Mincho', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+// ヘッダー
+header {
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .header-message {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #FFFFFF;
+        font-size: 4rem;
+        text-align: center;
+        font-weight: 600;
+        line-height: 70px;
+        letter-spacing: 0.3em;
+    }
+    .header-inner {
+        position: absolute;
+        top: 28px;
+        max-width: 1080px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: 50%;
+        transform: translateX(-50%);
+        .title a {
+            color: #FFFFFF;
+            font-size: 2rem;
+            padding-left: 80px;
+        }
+        .nav-list {
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+            padding-right: 79px;
+            li a {
+                color: #FFFFFF;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
