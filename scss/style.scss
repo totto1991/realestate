@@ -176,4 +176,20 @@ header {
 
 // WORKS
 #works {
+    .works-inner {
+        max-width: 980px;
+        margin-inline: auto;
+        padding-inline: 30px;
+    }
+    .works-list {
+        display: flex;
+        gap: 40px;
+        padding-top: 68px;
+        padding-bottom: 97px;
+        p {
+            padding-top: 19px;
+            font-size: 1.6rem;
+            line-height: 1.56;
+        }
+    }
 }
