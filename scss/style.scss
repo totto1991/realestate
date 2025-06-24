@@ -1,36 +1,53 @@
 @charset "utf-8";
 
+// 変数
+$bg-green: rgba(77, 150, 0, 0.102);
+$title-color: #4D9600;
+
 // 全体
 html {
     font-size: 62.5%;
 }
-
 body {
     font-family: 'Yu Mincho', sans-serif;
 }
-
 a {
     text-decoration: none;
+}
+.section-title {
+    padding-top: 80px;
+    text-align: center;
+    h3 {
+        color: $title-color;
+        font-size: 3rem;
+        line-height: 1.1;
+        letter-spacing: 0.3em;
+    }
+    p {
+        font-size: 2rem;
+        line-height: 1.65;
+        letter-spacing: 0.3em;
+        padding-top: 6px;
+    }
 }
 
 // ヘッダー
 header {
-    position: relative;
-    img {
-        width: 100%;
-        height: auto;
-    }
-    h1 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #FFFFFF;
-        font-size: 4rem;
-        text-align: center;
-        font-weight: 600;
-        line-height: 70px;
-        letter-spacing: 0.3em;
+    width: 100%;
+    height: auto;
+    background-image: url("../images/FirstView_01.jpg");
+    background-size: cover;
+    background-position: center;
+    .header-message {
+            padding: 339px 0 321px;
+        h1 {
+            color: #FFFFFF;
+            font-size: 4rem;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.75;
+            letter-spacing: 0.3em;
+        }
     }
     .header-inner {
         position: absolute;
@@ -62,23 +79,101 @@ header {
 
 // ABOUT
 #about {
-    position: relative;
+    width: 100%;
+    height: auto;
+    background-image: url("../images/PC_About.jpg");
+    background-size: cover;
+    background-position: center;
     .about-message {
-        position: absolute;
-        top: 110px;
-        left: 150px;
+        max-width: 1080px;
+        padding-top: 110px;
+        padding-left: 150px;
+        padding-bottom: 110px;
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         gap: 30px;
         .message-column {
             writing-mode: vertical-rl;
             text-orientation: upright;
+            letter-spacing: 7px;
+            line-height: 1;
         }
         h2 {
             font-size: 3rem;
+            padding-left: 30px;
         }
         p {
             font-size: 1.8rem;
         }
     }
+}
+
+// SERVICE
+#service {
+    background-color: $bg-green;
+    .service-inner {
+        max-width: 980px;
+        margin-inline: auto;
+        padding-inline: 30px;
+        .service-list {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            padding-top: 68px;
+            padding-bottom: 80px;
+            .service-content {
+                position: relative;
+                display: flex;
+                .service-content-image {
+                    z-index: 1;
+                    width: 65%;
+                    position: relative;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+                    p {
+                        font-size: 1.6rem;
+                        line-height: 1.56;
+                        padding-top: 19px;
+                        padding-bottom: 51px;
+                    }
+                }
+                .service-content-description {
+                    width: 500px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    background-color: #4D9600;
+                    color: #FFFFFF;
+                    padding: 50px 5px 42px 220px;
+                    h4 {
+                        font-size: 2.5rem;
+                        line-height: 1.32;
+                    }
+                    p {
+                        padding-top: 17px;
+                        font-size: 1.6rem;
+                        line-height: 1.56;
+                    }
+                }
+            }
+            .service-content-reverse {
+                flex-direction: row-reverse;
+                .service-content-image p {
+                    text-align: right;
+                }
+                .service-content-description {
+                    left: 0;
+                    padding-top: 50px;
+                    padding-left: 40px;
+                }
+            }
+        }
+    }
+}
+
+// WORKS
+#works {
 }
