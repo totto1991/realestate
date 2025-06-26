@@ -281,3 +281,79 @@ header {
         }
     }
 }
+
+// COMPANY
+#company {
+    .company-inner {
+        max-width: 980px;
+        margin-inline: auto;
+        padding-inline: 30px;
+        .company-content {
+            padding-top: 68px;
+            padding-bottom: 62px;
+            position: relative;
+            margin-bottom: 80px;
+            .company-map {
+                width: 65%;
+                iframe {
+                    position: relative;
+                    z-index: 1;
+                    width: 100%;
+                    aspect-ratio: 3/2;
+                }
+            }
+            .company-info-area {
+                position: absolute;
+                z-index: 0;
+                bottom: 0;
+                right: 0;
+                background-color: #4D9600;
+                color: #FFFFFF;
+                padding-left: 220px;
+                width: 500px;
+                .company-name {
+                    font-size: 2rem;
+                    line-height: 1.65;
+                    padding-top: 49px;
+                }
+                .company-address {
+                    font-size: 1.6rem;
+                    line-height: 1.56;
+                    padding-top: 7px;
+                }
+                .company-phonenumber-area {
+                    display: flex;
+                    align-items: baseline;
+                    line-height: 1;
+                    padding-top: 12px;
+                    .company-phonenumber {
+                        font-size: 1.6rem;
+                        span {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+                .company-email {
+                    font-size: 1.6rem;
+                    line-height: 1.56;
+                    padding-top: 19px;
+                    padding-bottom: 42px;
+                }
+            }
+        }
+    }
+}
+
+// 中間幅
+@media (max-width:924px) {
+    // COMPANY
+    #company {
+        .company-inner {
+            .company-content {
+                .company-map {
+                    width: 58%;
+                }
+            }
+        }
+    }
+}
