@@ -217,8 +217,8 @@
                             <p class="company-address">
                                 〒852-8065<br>長崎県長崎市横尾〇丁目〇-〇
                             </p>
-                            <div class="company-phonenumber-area">
-                                <p class="company-phonenumber">
+                            <div class="company-phone-number-area">
+                                <p class="company-phone-number">
                                     TEL <span>000-000-0000</span>
                                 </p>
                             </div>
@@ -227,6 +227,117 @@
                             </p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-inner">
+                <div class="section-title">
+                    <h3>CONTACT</h3>
+                    <p>お問い合わせ</p>
+                </div>
+                <div class="contact-description">
+                    <p>３営業日以内にメールにてご連絡いたします。*は入力必須項目となります。</p>
+                </div>
+                <div class="contact-form">
+                    <form action="mailto:y.tottori1014@gmail.com" method="POST" enctype="text/plain">
+                        <!-- お名前 * -->
+                        <div class="form-row form-row-flex">
+                            <label class="form-row-title" for="name">お名前 *</label>
+                            <input type="text" name="name" id="name" placeholder="例：北村太郎" required>
+                        </div>
+                        <!-- 性別 -->
+                        <div class="form-row">
+                            <label class="form-row-title">性別</label>
+                            <label class="radio-label">
+                                    <input type="radio" name="sex" value="男性" id="sex-male">
+                                    <span class="custom-radio"></span>
+                                    男性
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="sex" value="女性" id="sex-female">
+                                <span class="custom-radio"></span>
+                                女性
+                            </label>
+                        </div>
+                        <!-- メールアドレス * -->
+                        <div class="form-row form-row-flex">
+                            <label  class="form-row-title" for="email">メールアドレス *</label>
+                            <input type="email" name="email" id="email" placeholder="例：aaaaaaaa@gmail.com" required>
+                        </div>
+                        <!-- 問い合わせ種別 -->
+                        <div class="form-row form-row-flex">
+                            <label class="form-row-title" for="inquiry-type">問い合わせ種別</label>
+                            <select name="inquiry-type" id="inquiry-type">
+                                <option value="家づくりについて">家づくりについて</option>
+                                <option value="家づくりについて２">家づくりについて２</option>
+                            </select>
+                        </div>
+                        <!-- 内容 * -->
+                        <div class="form-row">
+                            <label for="content" class="form-row-title label-block">内容 *</label>
+                            <textarea name="content" id="content" rows="12.5"></textarea>
+                        </div>
+                        <!-- 何を見て当社HPを知りましたか？ (複数回答可)　* -->
+                        <div class="form-row">
+                            <label class="form-row-title label-block">何を見て当社HPを知りましたか？ (複数回答可)　*</label>
+                            <div class="checkbox">
+                                <!-- チェックボックス1段目 -->
+                                <div class="checkbox-row checkbox-row-1">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" name="know[]" value="インターネット">
+                                        <span class="check-mark"></span>インターネット
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" name="know[]" value="チラシ">
+                                        <span class="check-mark"></span>チラシ
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" name="know[]" value="住宅展示場">
+                                        <span class="check-mark"></span>住宅展示場
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" name="know[]" value="看板">
+                                        <span class="check-mark"></span>看板
+                                    </label>
+                                </div>
+
+                                <!-- チェックボックス2段目 -->
+                                <div class="checkbox-row checkbox-row-2">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" name="know[]" value="各種SNS">
+                                        <span class="check-mark"></span>各種SNS
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" name="know[]" value="紹介">
+                                        <span class="check-mark"></span>紹介
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" name="know[]" value="通りがかり">
+                                        <span class="check-mark"></span>通りがかり
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" name="know[]" value="その他">
+                                        <span class="check-mark"></span>その他
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="privacy-policy">
+                            <h7>個人情報保護方針</h7>
+                            <div class="privacy-policy-box">
+                                <p>個人情報取扱事業者の氏名又は名称(法24条1項1号)<br>
+                                株式会社 北村建設興業<br>
+                                <br>
+                                個人情報の取り扱い<br>
+                                弊社は、個人情報保護に関連する法令を遵守し、お客様からご提供いただく個人情報を、細心の注意を払って取り扱っております。このプライバシーポリシーでは、当社におけるお客様の個人情報の取扱いについてご説明しております。個人情報の利用目的(法18条、15条)弊社は建築物の設計、施工を主とした当社業務ならびにアフターサービスをさせていただく上で、お客様の個人情報を原則として次の利用目的の範囲内で利用させていただき</p>
+                            </div>
+                        </div>
+                        <div class="submit-btn">
+                            <input type="submit" value="内容に同意して送信">
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
