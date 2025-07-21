@@ -10,7 +10,8 @@ html {
 }
 body {
     overflow-x: hidden;
-    font-family: "Yu Mincho", "游明朝", "YuMincho", serif;
+    // font-family: "Yu Mincho", "游明朝", "YuMincho", serif;
+    font-family: "YuMincho", serif;
 }
 a {
     text-decoration: none;
@@ -726,6 +727,24 @@ footer {
                 .service-content-reverse {
                     .service-content-image p {
                         text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    // WORKS
+    #works {
+        .works-list {
+            flex-direction: column;
+            padding-top: 38px;
+            padding-bottom: 42px;
+            gap: 22px;
+            .works-content {
+                p {
+                    padding-top: 9px;
+                    .br-pc-only {
+                        display: none;
                     }
                 }
             }
