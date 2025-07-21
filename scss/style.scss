@@ -287,7 +287,7 @@ header {
                                 font-weight: 600;
                                 color: #55A500;
                                 width: 80px;
-                                margin-bottom: -20px;
+                                margin-bottom: -13px;
                                 text-align: left;
                             }
                             img {
@@ -639,12 +639,12 @@ footer {
 
 // SP版
 @media (max-width:767px) {
-    // 全体
+    // SP版全体
     .section-title {
         padding-top: 50px;
     }
 
-    // ヘッダー
+    // SP版ヘッダー
     header {
         .header-inner {
             top: 8px;
@@ -668,7 +668,7 @@ footer {
         } 
     }
 
-    // ABOUT
+    // SP版ABOUT
     #about {
         .about-message {
             flex-direction: column;
@@ -690,7 +690,7 @@ footer {
         }
     }
 
-    // SERVICE
+    // SP版SERVICE
     #service {
         .service-inner {
             .service-list {
@@ -733,7 +733,7 @@ footer {
         }
     }
 
-    // WORKS
+    // SP版WORKS
     #works {
         .works-list {
             flex-direction: column;
@@ -750,5 +750,36 @@ footer {
             }
         }
     }
+
+    // SP版NEWS
+    #news {
+        .news-inner {
+            .news-boxes {
+                flex-direction: column;
+                gap: 50px;
+                padding-top: 38px;
+                padding-bottom: 50px;
+                .news-box {
+                    width: 100%;
+                    ul {
+                        li {
+                            a {
+                                .news-content {
+                                    padding-left: 19px;
+                                    display: -webkit-box;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-line-clamp: 2;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 
 }
