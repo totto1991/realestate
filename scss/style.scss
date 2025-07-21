@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 // 変数
-$bg-green: rgba(77, 150, 0, 0.102);
-$title-color: #4D9600;
+$light-green: rgba(77, 150, 0, 0.102);
+$green: #4D9600;
 
 // 全体
 html {
@@ -10,7 +10,7 @@ html {
 }
 body {
     overflow-x: hidden;
-    font-family: 'Yu Mincho', sans-serif;
+    font-family: "Yu Mincho", "游明朝", "YuMincho", serif;
 }
 a {
     text-decoration: none;
@@ -19,30 +19,30 @@ a {
     padding-top: 80px;
     text-align: center;
     h3 {
-        color: $title-color;
+        color: $green;
         font-size: 3rem;
         line-height: 1.1;
         letter-spacing: 0.3em;
         font-weight: 500;
     }
-    p {
+    h4 {
         font-size: 2rem;
         line-height: 1.65;
         letter-spacing: 0.3em;
         padding-top: 6px;
         font-weight: 500;
+        // color:red;
     }
 }
 
 // ヘッダー
 header {
-    width: 100%;
-    height: auto;
-    background-image: url("../images/FirstView_01.jpg");
-    background-size: cover;
-    background-position: center;
+    position: relative;
     .header-message {
-            padding: 339px 0 321px;
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        transform: translateX(-50%);
         h1 {
             color: #FFFFFF;
             font-size: 4rem;
@@ -50,6 +50,9 @@ header {
             font-weight: 600;
             line-height: 1.75;
             letter-spacing: 0.3em;
+            .br-sp-only {
+                display: none;
+            }
         }
     }
     .header-inner {
@@ -113,7 +116,7 @@ header {
 
 // SERVICE
 #service {
-    background-color: $bg-green;
+    background-color: $light-green;
     .service-inner {
         max-width: 980px;
         margin-inline: auto;
@@ -151,7 +154,7 @@ header {
                     background-color: #4D9600;
                     color: #FFFFFF;
                     padding: 50px 5px 42px 220px;
-                    h4 {
+                    h5 {
                         font-size: 2.5rem;
                         line-height: 1.32;
                     }
@@ -199,7 +202,7 @@ header {
 
 // NEWS
 #news {
-    background-color: $bg-green;
+    background-color: $light-green;
     .news-inner {
         max-width: 980px;
         margin-inline: auto;
@@ -348,7 +351,7 @@ header {
 
 // CONTACT
 #contact {
-    background-color: $bg-green;
+    background-color: $light-green;
     .contact-inner {
         max-width: 860px;
         margin-inline: auto;
@@ -546,6 +549,66 @@ header {
     }
 }
 
+// フッター
+footer {
+    h4 {
+        font-size: 2rem;
+        text-align: center;
+        line-height: 1.65;
+        padding-top: 80px;
+        font-weight: 500;
+    }
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+        max-width: 710px;
+        margin: 0 auto;
+        padding-top: 56px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            background-color: #000000;
+            width: 722px;
+            height: 1px;
+            bottom: 56px;
+        }
+        li a {
+            font-size: 1.8rem;
+        }
+    }
+    .sns-area {
+        padding-top: 26px;
+        padding-bottom: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        a {
+            display: inline-block;
+            padding: 0;
+            line-height: 1;
+            img {
+                width: 28px;
+                height: 28px;
+                display: block;
+            }
+        }
+    }
+    .copyright {
+        background-color: $green;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 29px;
+        p {
+            font-size: 2rem;
+            color: #FFFFFF;
+            line-height: 1.65;
+            // font-weight: 500;
+        }
+    }
+}
+
 // 中間幅
 @media (max-width:924px) {
     // COMPANY
@@ -555,6 +618,39 @@ header {
                 .company-map {
                     width: 58%;
                 }
+            }
+        }
+    }
+}
+
+// SP版
+@media (max-width:767px) {
+    // ヘッダー
+    header {
+        .header-inner {
+            top: 8px;
+            .title a {
+                padding-left: 20px;
+            }
+        }
+        .header-message {
+            top: 36%;
+            h1 {
+                font-size: 3rem;
+                white-space: nowrap;
+                line-height: 2;
+                .br-sp-only {
+                    display: inline;
+                }
+            }
+        } 
+    }
+
+    // 非表示
+    header {
+        .header-inner {
+            .nav-list {
+                display: none;
             }
         }
     }
