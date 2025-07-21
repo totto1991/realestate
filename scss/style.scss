@@ -38,6 +38,9 @@ a {
 // ヘッダー
 header {
     position: relative;
+    picture img {
+        vertical-align: bottom;
+    }
     .header-message {
         position: absolute;
         top: 42%;
@@ -87,29 +90,39 @@ header {
 #about {
     width: 100%;
     height: auto;
-    background-image: url("../images/PC_About.jpg");
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    picture img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
     .about-message {
         max-width: 1080px;
-        padding-top: 110px;
-        padding-left: 150px;
-        padding-bottom: 110px;
         display: flex;
-        flex-direction: row;
-        gap: 30px;
-        .message-column {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 60px;
+        position: absolute;
+        top: 22%;
+        left: 14%;
+        .about-message-title {
+            font-size: 3rem;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            letter-spacing: 0.18em;
+        }
+        .message-body {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
             writing-mode: vertical-rl;
             text-orientation: upright;
             letter-spacing: 7px;
             line-height: 1;
-        }
-        h2 {
-            font-size: 3rem;
-            padding-left: 30px;
-        }
-        p {
-            font-size: 1.8rem;
+            .message-column {
+                font-size: 1.8rem;
+                line-height: 1.8;
+            }
         }
     }
 }
@@ -632,6 +645,9 @@ footer {
             .title a {
                 padding-left: 20px;
             }
+            .nav-list {
+                display: none;
+            }
         }
         .header-message {
             top: 36%;
@@ -646,12 +662,26 @@ footer {
         } 
     }
 
-    // 非表示
-    header {
-        .header-inner {
-            .nav-list {
-                display: none;
+    // ABOUT
+    #about {
+        .about-message {
+            flex-direction: column;
+            top: 8.6%;
+            left: 50%;
+            transform: translateX(-50%);
+            gap: 24px;
+            .about-message-title {
+                font-size: 2.5rem;
+            }
+            .message-body {
+                letter-spacing: 3px;
+                gap: 0;
+                .message-column {
+                    font-size: 1.6rem;
+                    line-height: 1.6;
+                }
             }
         }
     }
+
 }
