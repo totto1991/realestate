@@ -517,7 +517,7 @@ header {
                 textarea {
                     background-color: #FFFFFF;
                     width: 100%;
-                    padding: 40px 60px 40px 40px;
+                    padding: 40px;
                     max-height: 200px;
                     font-size: 1.8rem;
                     line-height: 1.72;
@@ -530,7 +530,7 @@ header {
                     }
                     .privacy-policy-box {
                         background-color: #FFFFFF;
-                        padding: 40px 60px 40px 40px;
+                        padding: 40px;
                         max-height: 300px;
                         overflow-y: scroll;
                         font-size: 1.8rem;
@@ -807,6 +807,87 @@ footer {
                     }
                     .company-email {
                         padding-bottom: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    // SP版CONTACT
+    #contact {
+        .contact-inner {
+            .contact-description {
+                padding-bottom: 10px;
+            }
+            .contact-form {
+                form {
+                    .form-row {
+                        padding-top: 30px;
+                        .radio-label {
+                            padding-left: 40px;
+                            padding-right: 26px;
+                        }
+                        textarea {
+                            padding: 30px;
+                            margin-top: 0;
+                            font-size: 1.6rem;
+                        }
+                        .label-block {
+                            width: 100%;
+                            line-height: 1.35;
+                        }
+                        .form-row-title-sex {
+                            width: 90px;
+                            padding-right: 0;
+                        }
+                        .checkbox {
+                            padding-top: 0;
+                            .checkbox-row {
+                                flex-wrap: wrap;
+                                .custom-checkbox {
+                                    width: 50%;
+                                    padding-bottom: 5px;
+                                }
+                                .sp-left {
+                                    padding-left: 38px;
+                                }
+                                .sp-right {
+                                    padding-left: 56px;
+                                    .check-mark {
+                                        left: 16px;
+                                    }
+                                }
+                            }
+                            .checkbox-row-1 {
+                                margin-bottom: 0;
+                            }
+                            .checkbox-row-2 {
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+                    .form-row-flex {
+                        flex-direction: column;
+                        .form-row-title {
+                            width: 100%;
+                        }
+                        input {
+                            width: 100%;
+                        }
+                        select {
+                            width: 100%;
+                        }
+                    }
+                    .privacy-policy {
+                        .privacy-policy-box {
+                            margin-top: 0;
+                            padding: 30px;
+                            font-size: 1.6rem;
+                        }
+                    }
+                    .submit-btn {
+                        padding-top: 50px;
+                        padding-bottom: 50px;
                     }
                 }
             }
