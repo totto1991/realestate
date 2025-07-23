@@ -54,6 +54,7 @@ header {
             font-weight: 600;
             line-height: 1.75;
             letter-spacing: 0.3em;
+            white-space: nowrap;
             .br-sp-only {
                 display: none;
             }
@@ -631,6 +632,20 @@ footer {
 }
 
 // 中間幅
+@media (max-width:1000px) {
+    // ヘッダー
+    header {
+        .header-inner {
+            .title a {
+                padding-left: 20px;
+            }
+            .nav-list {
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
 @media (max-width:924px) {
     // COMPANY
     #company {
@@ -638,6 +653,23 @@ footer {
             .company-content {
                 .company-map {
                     width: 58%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:880px) {
+    // ヘッダー
+    header {
+        .header-inner {
+            .title a {
+                font-size: 1.8rem;
+            }
+            .nav-list {
+                gap: 20px;
+                li a {
+                    font-size: 1.6rem;
                 }
             }
         }
@@ -655,9 +687,6 @@ footer {
     header {
         .header-inner {
             top: 8px;
-            .title a {
-                padding-left: 20px;
-            }
             .nav-list {
                 display: none;
             }
