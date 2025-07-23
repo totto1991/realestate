@@ -590,9 +590,12 @@ footer {
             width: 722px;
             height: 1px;
             bottom: 56px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         li a {
             font-size: 1.8rem;
+            height: 33px;
         }
     }
     .sns-area {
@@ -891,6 +894,33 @@ footer {
                     }
                 }
             }
+        }
+    }
+
+    // SP版フッター
+    footer {
+        h4 {
+            padding-top: 50px;
+        }
+        .nav-list {
+            padding-top: 40px;
+            &::before {
+                width: 315px;
+                bottom: 76px;
+            }
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 30px;
+            row-gap: 5px;
+            max-width: 315px;
+        }
+        .sns-area {
+            padding-top: 28px;
+            padding-bottom: 50px;
+        }
+        .copyright {
+            padding-top: 21px;
+            padding-bottom: 21px;
         }
     }
 
