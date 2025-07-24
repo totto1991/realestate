@@ -644,6 +644,15 @@ footer {
             }
         }
     }
+
+    // WORKS
+    #works {
+        .works-list {
+            p {
+                font-size: 1.4rem;
+            }
+        }
+    }
 }
 
 @media (max-width:924px) {
@@ -660,6 +669,14 @@ footer {
         }
     }
 
+    // WORKS
+    #works {
+        .works-list {
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
 
     // COMPANY
     #company {
@@ -693,6 +710,15 @@ footer {
     #about {
         .about-message {
             top: 15%;
+        }
+    }
+
+    // WORKS
+    #works {
+        .works-list {
+            p {
+                font-size: 1.1rem;
+            }
         }
     }
 
@@ -800,6 +826,7 @@ footer {
             gap: 22px;
             .works-content {
                 p {
+                    font-size: 1.6rem;
                     padding-top: 9px;
                     .br-pc-only {
                         display: none;
@@ -1002,6 +1029,7 @@ footer {
     #about {
         .about-message {
             top: 1%;
+            gap: 20px;
         }
     }
 }
