@@ -647,6 +647,20 @@ footer {
 }
 
 @media (max-width:924px) {
+    // SERVICE
+    #service {
+        .service-inner {
+            .service-list {
+                .service-content {
+                    .service-content-image {
+                        width: 55%;
+                    }
+                }
+            }
+        }
+    }
+
+
     // COMPANY
     #company {
         .company-inner {
@@ -681,6 +695,7 @@ footer {
             top: 15%;
         }
     }
+
 }
 
 // SP版
@@ -962,6 +977,26 @@ footer {
 }
 
 // 最小幅
+@media (max-width:375px) {
+    // SERVICE
+    #service {
+        .service-inner {
+            .service-list {
+                .service-content {
+                    .service-content-description {
+                        h5 {
+                            font-size: 1.8rem;
+                        }
+                        p {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width:350px) {
     // ABOUT
     #about {
