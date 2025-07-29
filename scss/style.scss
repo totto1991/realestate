@@ -380,6 +380,16 @@ header {
             line-height: 1.65;
             font-weight: 500;
             padding-top: 35px;
+            width: 120%;
+            .br-767px {
+                display: none;
+            }
+            .br-500px {
+                display: none;
+            }
+            .br-365px {
+                display: none;
+            }
         }
         .contact-form {
             form {
@@ -542,6 +552,14 @@ header {
                 .form-row-flex {
                     display: flex;
                     align-items: center;
+                    label {
+                        width: 170px;
+                        flex-shrink: 0;
+                    }
+                    input {
+                        // flex: 1;
+                        height: 50px;
+                    }
                 }
                 .submit-btn {
                     text-align: center;
@@ -552,7 +570,7 @@ header {
                         color: #FFFFFF;
                         font-size: 2rem;
                         font-weight: 600;
-                        width: 300px;
+                        width: 100%;
                         cursor: pointer;
                         padding: 0;
                         border: 1px solid #707070;
@@ -899,6 +917,9 @@ footer {
         .contact-inner {
             .contact-description {
                 padding-bottom: 10px;
+                p .br-767px {
+                    display: inline;
+                }
             }
             .contact-form {
                 form {
@@ -1003,6 +1024,23 @@ footer {
     }
 }
 
+// SP版中間幅
+@media (max-width:500px) {
+    // CONTACT
+    #contact {
+        .contact-inner {
+            .contact-description {
+                p .br-767px {
+                    display: none;
+                }
+                p .br-500px {
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
 // 最小幅
 @media (max-width:375px) {
     // SERVICE
@@ -1018,6 +1056,44 @@ footer {
                             font-size: 1.3rem;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    // CONTACT
+    #contact {
+        .contact-inner {
+            .contact-form {
+                form {
+                    .form-row {
+                        .radio-label {
+                            padding-left: 30px;
+                            padding-right: 15px;
+                        }
+                        .form-row-title-sex {
+                            width: 70px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:365px) {
+    // CONTACT
+    #contact {
+        .contact-inner {
+            .contact-description p {
+                .br-767px {
+                    display: none;
+                }
+                .br-500px {
+                    display: none;
+                }
+                .br-365px {
+                    display: inline;
                 }
             }
         }
