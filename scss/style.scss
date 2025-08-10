@@ -39,8 +39,14 @@ a {
 // ヘッダー
 header {
     position: relative;
-    picture img {
-        vertical-align: bottom;
+    ul {
+        li {
+            span {
+                picture img {
+                    display: block;
+                }
+            }
+        }
     }
     .header-message {
         position: absolute;

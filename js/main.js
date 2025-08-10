@@ -58,3 +58,13 @@ $(function() {
         }
     );
 });
+
+// FV（ファーストビュー）の画像3枚を自動スライドさせる
+$(function() {
+    $("#slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+    });
+});
