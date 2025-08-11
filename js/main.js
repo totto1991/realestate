@@ -3,7 +3,7 @@ $('a[href^="#"]').click(function() {
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
     var position = target.offset().top;
-    position = position - 50;
+    position = position - 80;
     $("html, body").animate({scrollTop:position}, 1000, "swing");
     return false;
 });
@@ -21,7 +21,7 @@ $(function() {
 });
 
 // ヘッダーはABOUTエリアまでスクロールしたら背景色をつける（背景色は透過させない）
-$(function() {
+$(window).on('load', function() {
     const aboutTop = $('#about').offset().top;
 
     $(window).on('scroll', function() {
@@ -62,7 +62,7 @@ $(function() {
 $(window).on('resize', function() {
     if ($(window).width() >= 768) {
         $(".hamburger-menu").hide();
-        $("hamburger").removeClass("active");
+        $(".hamburger").removeClass("active");
     }
 });
 
