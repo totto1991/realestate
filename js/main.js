@@ -8,9 +8,9 @@ $('a[href^="#"]').click(function() {
     return false;
 });
 
-// ナビゲーションの各メニューはホバー時に下線を表示させる
+// ヘッダーのナビゲーションの各メニューはホバー時に下線を表示させる
 $(function() {
-    $('a.nav-btn').hover (
+    $('a.header-nav-btn').hover (
         function() {
             $(this).css('text-decoration', 'underline');
         },
@@ -118,3 +118,15 @@ $(".modal-close").click(
         $(".modal-area-04").hide()
     }
 );
+
+// フッターのナビゲーションの各メニューはホバー時にフォントカラーを薄くする
+$(function() {
+    $('a.footer-nav-btn').hover (
+        function() {
+            $(this).css('color', '#666');
+        },
+        function() {
+            $(this).css('color', '#000');
+        }
+    );
+});
