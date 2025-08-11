@@ -58,6 +58,13 @@ $(function() {
         }
     );
 });
+// // リサイズ時に PC幅(768px以上)になったら .hamburger-menu を強制的に非表示 にする。
+$(window).on('resize', function() {
+    if ($(window).width() >= 768) {
+        $(".hamburger-menu").hide();
+        $("hamburger").removeClass("active");
+    }
+});
 
 // FV（ファーストビュー）の画像3枚を自動スライドさせる
 $(function() {
@@ -68,3 +75,46 @@ $(function() {
         autoplaySpeed: 4000,
     });
 });
+
+// WORKSの画像またはテキストをタップしたらモーダルで拡大画像を表示させる
+$(".modal-open-01").click(
+    function() {
+        $(".modal-area-01").show()
+    }
+);
+$(".modal-open-02").click(
+    function() {
+        $(".modal-area-02").show()
+    }
+);
+$(".modal-open-03").click(
+    function() {
+        $(".modal-area-03").show()
+    }
+);
+$(".modal-open-04").click(
+    function() {
+        $(".modal-area-04").show()
+    }
+);
+// モーダル表示後の薄暗い背景をタップしても画像が非表示になる
+$(".modal-close").click(
+    function() {
+        $(".modal-area-01").hide()
+    }
+);
+$(".modal-close").click(
+    function() {
+        $(".modal-area-02").hide()
+    }
+);
+$(".modal-close").click(
+    function() {
+        $(".modal-area-03").hide()
+    }
+);
+$(".modal-close").click(
+    function() {
+        $(".modal-area-04").hide()
+    }
+);

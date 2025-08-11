@@ -305,10 +305,65 @@ header {
         gap: 40px;
         padding-top: 68px;
         padding-bottom: 97px;
-        p {
-            padding-top: 19px;
-            font-size: 1.6rem;
-            line-height: 1.56;
+        .works-content {
+            picture img {
+                display: block;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            p {
+                padding-top: 19px;
+                font-size: 1.6rem;
+                line-height: 1.56;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        // モーダル
+        .modal-area {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99;
+            .modal-bg {
+                width: 100%;
+                height: 100vh;
+                background: #000;
+                opacity: .502;
+            }
+            .modal-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 41.667%;
+                height: auto;
+                background: #FFF;
+                img {
+                    display: block;
+                    padding: 15px;
+                }
+                p {
+                    padding-top: 0;
+                    padding-bottom: 10px;
+                    padding-left: 15px;
+                    font-size: 1.6rem;
+                    line-height: 1.56;
+                }
+                .modal-cancel {
+                    position: absolute;
+                    top: 0;
+                    right: 3px;
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+            }
         }
     }
 }
@@ -869,6 +924,9 @@ footer {
         } 
         .hamburger {
             display: inline;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
         }
     }
 
@@ -951,6 +1009,11 @@ footer {
                     .br-pc-only {
                         display: none;
                     }
+                }
+            }
+            .modal-area {
+                .modal-content p span {
+                    display: inline-block;
                 }
             }
         }
