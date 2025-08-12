@@ -130,3 +130,26 @@ $(function() {
         }
     );
 });
+
+// トップへ戻るボタン
+$(window).on('load', function() {
+    var goTop = $("#back-to-top-btn");
+    goTop.hide();
+
+    var aboutTop = $("#about").offset().top;
+    
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= aboutTop) {
+            goTop.fadeIn(300);
+        } else {
+            goTop.fadeOut(300);
+        }
+    });
+    
+    goTop.click(function() {
+        $("body, html").animate({scrollTop: 0}, 1000);
+        return false;
+    });
+});
+
+

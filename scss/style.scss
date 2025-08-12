@@ -739,7 +739,7 @@ header {
                         width: 100%;
                         cursor: pointer;
                         padding: 0;
-                        border: 1px solid #707070;
+                        border: 1px solid #4D9600;
                         transition: all 0.5s ease;
                     }
                     input[type="submit"]:hover {
@@ -749,6 +749,26 @@ header {
                 }
             }
         }
+    }
+}
+
+// トップへ戻るボタン
+#back-to-top-btn {
+    width: 68px;
+    height: 68px;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    background-color: #4D9600;
+    border-radius: 50%;
+    &:hover {
+        cursor: pointer;
+    }
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
