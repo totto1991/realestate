@@ -1,16 +1,16 @@
 @charset "utf-8";
 
+
 // 変数
 $light-green: rgba(77, 150, 0, 0.102);
 $green: #4D9600;
 
 // 全体
 html {
-    font-size: 62.5%;
+    font-size: 10px;
 }
 body {
     overflow-x: hidden;
-    // font-family: "Yu Mincho", "游明朝", "YuMincho", serif;
     font-family: "YuMincho", serif;
 }
 a {
@@ -32,26 +32,21 @@ a {
         letter-spacing: 0.3em;
         padding-top: 6px;
         font-weight: 500;
-        // color:red;
     }
+}
+
+// 共通
+img {
+    display: block;
 }
 
 // ヘッダー
 header {
     position: relative;
-    ul {
-        li {
-            span {
-                picture img {
-                    display: block;
-                }
-            }
-        }
-    }
     .header-message {
         position: absolute;
         top: 42%;
-        left: 50%;
+        left: 51%;
         transform: translateX(-50%);
         h1 {
             color: #FFFFFF;
@@ -70,7 +65,6 @@ header {
         position: absolute;
         position: fixed;
         top: 0;
-        // max-width: 1080px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -82,18 +76,21 @@ header {
         z-index: 2;
         .title a {
             color: #FFFFFF;
-            font-size: 2rem;
+            font-size: 1.852vw;
             line-height: 1.65;
-            padding-left: 80px;
+            padding-left: 7.407vw;
+            @media (max-width: 767px) {
+                font-size: 2rem;
+            }
         }
         .nav-list {
             display: flex;
             justify-content: flex-end;
-            gap: 30px;
-            padding-right: 79px;
+            gap: 2.9vw;
+            padding-right: 10.2vw;
             li a {
                 color: #FFFFFF;
-                font-size: 1.8rem;
+                font-size: 1.667vw;
                 line-height: 1.83;
             }
         }
@@ -193,7 +190,6 @@ header {
     height: auto;
     position: relative;
     picture img {
-        display: block;
         width: 100%;
         height: auto;
     }
@@ -202,7 +198,7 @@ header {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        gap: 60px;
+        gap: 4.5rem;
         position: absolute;
         top: 22%;
         left: 14%;
@@ -215,7 +211,7 @@ header {
         .message-body {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.4rem;
             writing-mode: vertical-rl;
             text-orientation: upright;
             letter-spacing: 7px;
@@ -246,10 +242,10 @@ header {
                 display: flex;
                 .service-content-image {
                     z-index: 1;
-                    width: 65%;
+                    width: 55.556vw;
+                    max-width: 600px;
                     position: relative;
                     picture img {
-                        display: block;
                         width: 100%;
                         height: auto;
                     }
@@ -261,20 +257,23 @@ header {
                     }
                 }
                 .service-content-description {
-                    width: 500px;
+                    width: 46.296vw;
+                    height: 23.148vw;
                     position: absolute;
                     bottom: 0;
                     right: 0;
                     background-color: #4D9600;
                     color: #FFFFFF;
-                    padding: 50px 5px 42px 220px;
+                    padding-top: 4.63vw;
+                    padding-left: 20.37vw;
+                    // padding: 50px 5px 42px 220px;
                     h5 {
-                        font-size: 2.5rem;
+                        font-size: 2.315vw;
                         line-height: 1.32;
                     }
                     p {
                         padding-top: 17px;
-                        font-size: 1.6rem;
+                        font-size: 1.481vw;
                         line-height: 1.56;
                     }
                 }
@@ -308,14 +307,13 @@ header {
         padding-bottom: 97px;
         .works-content {
             picture img {
-                display: block;
                 &:hover {
                     cursor: pointer;
                 }
             }
             p {
                 padding-top: 19px;
-                font-size: 1.6rem;
+                font-size: 1.481vw;
                 line-height: 1.56;
                 &:hover {
                     cursor: pointer;
@@ -346,7 +344,6 @@ header {
                 height: auto;
                 background: #FFF;
                 img {
-                    display: block;
                     padding: 15px;
                 }
                 p {
@@ -438,7 +435,7 @@ header {
                             padding-top: 17px;
                             padding-bottom: 20px;
                             .more-text {
-                                font-size: 2rem;
+                                font-size: 1.9rem;
                                 font-weight: 600;
                                 color: #55A500;
                                 width: 80px;
@@ -545,8 +542,9 @@ header {
             font-size: 2rem;
             line-height: 1.65;
             font-weight: 500;
-            padding-top: 35px;
-            width: 120%;
+            padding-top: 3.2rem;
+            margin-bottom: 1.5rem;
+            width: 100%;
             .br-767px {
                 display: none;
             }
@@ -560,7 +558,7 @@ header {
         .contact-form {
             form {
                 .form-row {
-                    padding-top: 50px;
+                    padding-top: 5rem;
                     .form-row-title {
                         font-size: 2rem;
                         line-height: 1.65;
@@ -577,17 +575,16 @@ header {
                         margin-top: 10px;
                     }
                     .checkbox {
-                        padding-top: 10px;
+                        padding-top: 0.8rem;
                         .checkbox-row {
                             display: flex;
                             .custom-checkbox {
                                 width: 25%;
                                 position: relative;
                                 display: inline-block;
-                                padding-left: 40px;
-                                // margin-bottom: 15px;
+                                padding-left: 4rem;
                                 cursor: pointer;
-                                font-size: 1.6rem;
+                                font-size: 1.8rem;
                                 font-weight: 500;
                                 line-height: 1.6;
                                 input[type="checkbox"] {
@@ -622,7 +619,7 @@ header {
                             margin-bottom: 15px;
                         }
                         .checkbox-row-2 {
-                            margin-bottom: 52px;
+                            margin-bottom: 4.8rem;
                         }
                     }
                 }
@@ -737,6 +734,7 @@ header {
                         font-size: 2rem;
                         font-weight: 600;
                         width: 100%;
+                        max-width: 30rem;
                         cursor: pointer;
                         padding: 0;
                         border: 1px solid #4D9600;
@@ -805,7 +803,7 @@ footer {
     }
     .sns-area {
         padding-top: 26px;
-        padding-bottom: 80px;
+        padding-bottom: 8.3rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -817,7 +815,6 @@ footer {
             img {
                 width: 28px;
                 height: 28px;
-                display: block;
             }
         }
     }
@@ -827,61 +824,15 @@ footer {
         padding-top: 30px;
         padding-bottom: 29px;
         p {
-            font-size: 2rem;
+            font-size: 1.7rem;
             color: #FFFFFF;
             line-height: 1.65;
-            // font-weight: 500;
         }
     }
 }
 
 // 中間幅
-@media (max-width:1000px) {
-    // ヘッダー
-    header {
-        .header-inner {
-            .title a {
-                padding-left: 20px;
-            }
-            .nav-list {
-                padding-right: 20px;
-            }
-        }
-    }
-
-    // WORKS
-    #works {
-        .works-list {
-            p {
-                font-size: 1.4rem;
-            }
-        }
-    }
-}
-
 @media (max-width:924px) {
-    // SERVICE
-    #service {
-        .service-inner {
-            .service-list {
-                .service-content {
-                    .service-content-image {
-                        width: 55%;
-                    }
-                }
-            }
-        }
-    }
-
-    // WORKS
-    #works {
-        .works-list {
-            p {
-                font-size: 1.2rem;
-            }
-        }
-    }
-
     // COMPANY
     #company {
         .company-inner {
@@ -895,37 +846,12 @@ footer {
 }
 
 @media (max-width:880px) {
-    // ヘッダー
-    header {
-        .header-inner {
-            .title a {
-                font-size: 1.8rem;
-            }
-            .nav-list {
-                gap: 20px;
-                li a {
-                    font-size: 1.6rem;
-                }
-            }
-        }
-    }
-
     // ABOUT
     #about {
         .about-message {
             top: 15%;
         }
     }
-
-    // WORKS
-    #works {
-        .works-list {
-            p {
-                font-size: 1.1rem;
-            }
-        }
-    }
-
 }
 
 // SP版
