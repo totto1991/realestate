@@ -73,6 +73,7 @@ $(function() {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
+        arrows: false,
     });
 });
 
@@ -151,5 +152,4 @@ $(window).on('load', function() {
         return false;
     });
 });
-
 

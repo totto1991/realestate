@@ -10,7 +10,6 @@ html {
     font-size: 10px;
 }
 body {
-    overflow-x: hidden;
     font-family: "YuMincho", serif;
 }
 a {
@@ -43,6 +42,11 @@ img {
 // ヘッダー
 header {
     position: relative;
+    #slider {
+        img {
+            width: 100%;
+        }
+    }
     .header-message {
         position: absolute;
         top: 42%;
@@ -62,7 +66,6 @@ header {
         }
     }
     .header-inner {
-        position: absolute;
         position: fixed;
         top: 0;
         width: 100%;
@@ -72,22 +75,19 @@ header {
         left: 50%;
         transform: translateX(-50%);
         padding-top: 28px;
-        padding-bottom: 28px;
+        padding-bottom: 33px;
         z-index: 2;
         .title a {
             color: #FFFFFF;
             font-size: 1.852vw;
             line-height: 1.65;
-            padding-left: 7.407vw;
-            @media (max-width: 767px) {
-                font-size: 2rem;
-            }
+            padding-left: 7.5vw;
         }
         .nav-list {
             display: flex;
             justify-content: flex-end;
             gap: 2.9vw;
-            padding-right: 10.2vw;
+            padding-right: 7.8vw;
             li a {
                 color: #FFFFFF;
                 font-size: 1.667vw;
@@ -258,7 +258,7 @@ header {
                 }
                 .service-content-description {
                     width: 46.296vw;
-                    height: 23.148vw;
+                    height: auto;
                     position: absolute;
                     bottom: 0;
                     right: 0;
@@ -266,7 +266,7 @@ header {
                     color: #FFFFFF;
                     padding-top: 4.63vw;
                     padding-left: 20.37vw;
-                    // padding: 50px 5px 42px 220px;
+                    padding-bottom: calc(42 / 1080 * 100vw);
                     h5 {
                         font-size: 2.315vw;
                         line-height: 1.32;
@@ -478,16 +478,15 @@ header {
             margin-bottom: 80px;
             .company-map {
                 width: 65%;
+                z-index: 1;
                 iframe {
-                    position: relative;
-                    z-index: 1;
                     width: 100%;
                     aspect-ratio: 3/2;
                 }
             }
             .company-info-area {
                 position: absolute;
-                z-index: 0;
+                z-index: -1;
                 bottom: 0;
                 right: 0;
                 background-color: #4D9600;
@@ -720,7 +719,6 @@ header {
                         flex-shrink: 0;
                     }
                     input {
-                        // flex: 1;
                         height: 50px;
                     }
                 }
@@ -858,14 +856,18 @@ footer {
 @media (max-width:767px) {
     // SP版全体
     .section-title {
-        padding-top: 50px;
+        padding-top: 57px;
     }
 
     // SP版ヘッダー
     header {
         .header-inner {
             padding-top: 10.6px;
-            padding-bottom: 10.45px;
+            padding-bottom: 14px;
+            .title a {
+                font-size: 2rem;
+                padding-left: 2rem;
+            }
             .nav-list {
                 display: none;
             }
@@ -893,7 +895,7 @@ footer {
     #about {
         .about-message {
             flex-direction: column;
-            top: 8.6%;
+            top: 10%;
             left: 50%;
             transform: translateX(-50%);
             gap: 24px;
@@ -917,7 +919,7 @@ footer {
             .service-list {
                 padding-top: 38px;
                 padding-bottom: 50px;
-                gap: 50px;
+                gap: 54px;
                 .service-content {
                     flex-direction: column;
                     .service-content-image {
@@ -942,6 +944,7 @@ footer {
                         }
                         p {
                             padding-top: 14px;
+                            font-size: 1.6rem;
                         }
                     }
                 }
@@ -956,11 +959,14 @@ footer {
 
     // SP版WORKS
     #works {
+        .section-title {
+            padding-top: 50px;
+        }
         .works-list {
             flex-direction: column;
             padding-top: 38px;
             padding-bottom: 42px;
-            gap: 22px;
+            gap: 24px;
             .works-content {
                 p {
                     font-size: 1.6rem;
@@ -983,7 +989,7 @@ footer {
         .news-inner {
             .news-boxes {
                 flex-direction: column;
-                gap: 50px;
+                gap: 55px;
                 padding-top: 38px;
                 padding-bottom: 50px;
                 .news-box {
@@ -993,6 +999,7 @@ footer {
                             a {
                                 .news-content {
                                     padding-left: 19px;
+                                    padding-bottom: 10px;
                                     display: -webkit-box;
                                     -webkit-box-orient: vertical;
                                     -webkit-line-clamp: 2;
@@ -1000,6 +1007,11 @@ footer {
                                     overflow: hidden;
                                     text-overflow: ellipsis;
                                 }
+                            }
+                        }
+                        .more-link-area {
+                            .more-link {
+                                padding-top: 20px;
                             }
                         }
                     }
@@ -1020,6 +1032,9 @@ footer {
                 margin-bottom: 0;
                 .company-map {
                     width: 100%;
+                    iframe {
+                        aspect-ratio: 315 / 300;
+                    }
                 }
                 .company-info-area {
                     position: static;
@@ -1039,8 +1054,11 @@ footer {
     // SP版CONTACT
     #contact {
         .contact-inner {
+            .section-title {
+                padding-top: 49px;
+            }
             .contact-description {
-                padding-bottom: 10px;
+                padding-bottom: 0;
                 p .br-767px {
                     display: inline;
                 }
@@ -1061,6 +1079,7 @@ footer {
                         .label-block {
                             width: 100%;
                             line-height: 1.35;
+                            padding-right: 0;
                         }
                         .form-row-title-sex {
                             width: 90px;
@@ -1073,14 +1092,16 @@ footer {
                                 .custom-checkbox {
                                     width: 50%;
                                     padding-bottom: 5px;
+                                    font-size: 1.6rem;
+                                    padding-left: 3rem;
                                 }
                                 .sp-left {
-                                    padding-left: 38px;
+                                    padding-left: 3rem;
                                 }
                                 .sp-right {
-                                    padding-left: 56px;
+                                    padding-left: 3.5rem;
                                     .check-mark {
-                                        left: 16px;
+                                        left: 6px;
                                     }
                                 }
                             }
@@ -1106,7 +1127,6 @@ footer {
                     }
                     .privacy-policy {
                         .privacy-policy-box {
-                            margin-top: 0;
                             padding: 30px;
                             font-size: 1.6rem;
                         }
@@ -1123,18 +1143,18 @@ footer {
     // SP版フッター
     footer {
         h4 {
-            padding-top: 50px;
+            padding-top: 54px;
         }
         .nav-list {
             padding-top: 40px;
             &::before {
                 width: 315px;
-                bottom: 76px;
+                bottom: 8.2rem;
             }
             flex-wrap: wrap;
             justify-content: center;
             column-gap: 30px;
-            row-gap: 5px;
+            row-gap: 15px;
             max-width: 315px;
         }
         .sns-area {
@@ -1144,6 +1164,9 @@ footer {
         .copyright {
             padding-top: 21px;
             padding-bottom: 21px;
+            .copyright-span {
+                display: block;
+            }
         }
     }
 }
