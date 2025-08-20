@@ -267,14 +267,26 @@ header {
                     padding-top: 4.63vw;
                     padding-left: 20.37vw;
                     padding-bottom: calc(42 / 1080 * 100vw);
+                    @media (min-width: 1080px) {
+                        width: 500px;
+                        padding-top: 5rem;
+                        padding-left: 22rem;
+                        padding-bottom: 4.2rem;
+                    }
                     h5 {
                         font-size: 2.315vw;
                         line-height: 1.32;
+                        @media (min-width: 1080px) {
+                            font-size: 2.5rem;
+                        }
                     }
                     p {
                         padding-top: 17px;
                         font-size: 1.481vw;
                         line-height: 1.56;
+                        @media (min-width: 1080px) {
+                            font-size: 1.6rem;
+                        }
                     }
                 }
             }
