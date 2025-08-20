@@ -481,6 +481,7 @@ header {
                 z-index: 1;
                 iframe {
                     width: 100%;
+                    height: auto;
                     aspect-ratio: 3/2;
                 }
             }
@@ -696,7 +697,7 @@ header {
                     line-height: 1.72;
                 }
                 .privacy-policy {
-                    h7 {
+                    h5 {
                         font-size: 2rem;
                         line-height: 1.65;
                         font-weight: 500;
