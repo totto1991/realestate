@@ -63,7 +63,7 @@ $(window).on('resize', function() {
     if ($(window).width() >= 768) {
         $(".hamburger-menu").hide();
         $(".hamburger").removeClass("active");
-    }
+        }
 });
 
 // FV（ファーストビュー）の画像3枚を自動スライドさせる
